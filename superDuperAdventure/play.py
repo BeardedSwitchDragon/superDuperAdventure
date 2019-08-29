@@ -32,4 +32,3 @@ class Player():
 
     def changeClothing(self, index, key, value):
         pass
-    

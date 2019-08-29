@@ -1,19 +1,33 @@
 from play import *
 from clothing import *
-
+from street1 import *
 Player = Player(54)
 
 
 def run():
     start = input2("Super Duper Adventure: Press Enter To Continue or Press S to check stats")
-    start2 = input2("There's a closet, do you want to check or change your outfit [Y/N]?")
+    start2 = input2("You are in your nice cozy cabin. You took a morning nap on the rocking chair in front of the crackling fireplace.")
+    start3 = input2("Learn more about your house? [Y/N]")
+    if yesOrNo(start3):
+        Player.update()
+        start5 = input2(
+        """\n The walls are made of polished pine tree logs,
+         and the television is a bit old.
+          \n Downstairs there is a dank and dusty cellar that you never use because
+          you love the tasty and tangy taste of store-bought orange juice. \n
+          Your sentient pet Black Hole, named 'Water-bottle and a 1/2 Snr' \n was incredibly exhausted
+          from watching the television for too long.  \n The floor is made of an unknown
+          substance, but it is really creaky. \n All was cold except for that comforting, fading
+          heat of the dying fire.""")
+    start4 = input2("There's a closet, do you want to check or change your outfit [Y/N]?")
     if yesOrNo(start2):
         closet()
         Player.update()
-    start3 = input2("Prepare some food?")
+    start5 = input2("Prepare some food?")
     if yesOrNo(start3):
         pantry()
         Player.update()
+    start6 = input2("Go outside?")
 
 def yesOrNo(q):
     if  q == "N" or q == "no" or q == "No":
@@ -35,6 +49,10 @@ def displayStats():
         print("Health: " + str(Player.health))
         print("Warmth: " + str(Player.warmth))
         print("Snazz: " + str(Player.snazz))
+        print("Hat:" + Player.clothing["Hat"])
+        print("Shirt" + Player.clothing["Shirt"])
+        print("Pants" + Player.clothing["Pants"])
+        print("Shoes" + player.clothing["Shoes"])
 
 def closet():
     closet1 = input2("Your items are: ")
