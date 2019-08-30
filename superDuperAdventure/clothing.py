@@ -15,3 +15,9 @@ class Basic(Clothing):
         self.selection["Hat"] = "Basic Bowler Hat"
         self.selection["Shirt"] = "Taco suit"
         self.selection["Pants"] = "Baggy Jeans"
+        self.selection["Shoes"] = "Neon Sneakers"
+
+class Nude(Clothing):
+    def __init__(self):
+        super().__init__()
+        self.snazz = 0
