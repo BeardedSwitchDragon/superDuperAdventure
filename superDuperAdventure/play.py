@@ -6,7 +6,8 @@ class Player():
         self.money = 0
         self.weapons = {}
         self.clotheType = Basic()
-        self.clothing = { "Hat": self.clotheType.selection["Hat"], "Shirt": self.clotheType.selection["Shirt"], "Pants": self.clotheType.selection["Pants"], "Shoes": self.clotheType.selection["Shoes"]}
+        self.clothing = {}
+        self.clothing = self.clotheType.selection
         self.foodItems = {}
         self.foodItems["Pantry"] = {False: 0, "Cereal": 12, "Milk": 8, "Egg": 21, "Salad Mix": 17, "Oatmeal": 50, "armadillo": 100, "ibygu54534weAAw@1aaaa??": 999, "faeces": 300}
         self.health = 50

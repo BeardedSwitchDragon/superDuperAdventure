@@ -13,9 +13,13 @@ class Basic(Clothing):
         #self.selection = {"Basic Bowler Hat": 13, "Basic Black Sweater": 6, "Basic Baggy Jeans": 3, "Basic Red Polo Shirt": 9, "Neon Sneakers": 7}
         self.snazz = 8
         self.selection["Hat"] = "Basic Bowler Hat"
-        self.selection["Shirt"] = "Taco suit"
-        self.selection["Pants"] = "Baggy Jeans"
-        self.selection["Shoes"] = "Neon Sneakers"
+        self.selection["Shirt"] = "Basic Taco suit"
+        self.selection["Pants"] = "Basic Baggy Jeans"
+        self.selection["Shoes"] = "Basic Neon Sneakers"
+        self.selection["Hat2"] = "Basic Orange Cap"
+        self.selection["Shirt2"] = "Basic Plain White Shirt"
+        self.selection["Pants2"] = "Basic Track-pants"
+        self.selection["Shoes2"] = "Basic Black Leather Shoes"
 
 class Nude(Clothing):
     def __init__(self):

@@ -5,6 +5,7 @@ from hyena import *
 from global_funcs import *
 Player = Player(54)
 Hyena = Hyena(56)
+swapClothing = ""
 
 def run():
     start = input2("Super Duper Adventure: Press Enter To Continue or Press S to check stats", Player)
@@ -51,9 +52,27 @@ def displayStats():
         print("Shoes" + player.clothing["Shoes"])
 
 def closet():
-    closet1 = input2("Your items are: ")
+
+    closet1 = input2("Your items are: ", Player)
     for key in Player.clothing:
-        print(key, "          ", Player.clothing[key])
+        print(key, ":          ", Player.clothing[key])
+    closet2 = input2("Change? ", Player)
+    if yesOrNo(closet2):
+        closet3 = input2("So what do you want to change into? ", Player)
+        swapClothing = closet3
+        for item in Player.clothing:
+            print(item)
+            if closet3 == Player.clothing[item]:
+                if "2" not in item:
+                    print("already equipped")
+
+                if "2" in item:
+                    Player.clothing[item] = swapClothing
+                    Player.clothing[item] = Player.clothing["Hat2"]
+                    Player.clothing[item.strip("2")] = swapClothing
+
+
+
 def pantry():
 
     pantry1 = input2("Your food choices are: ", Player)
@@ -87,7 +106,7 @@ def hyenaInHome():
                 Hyena.hunger -= Player.foodItems["Pantry"][key]/(50 + Player.foodItems["Pantry"][key])
                 print("Hyena ate the " + key)
                 Player.foodItems["Pantry"].pop(key, None)
-        
+
                 break
 
 
